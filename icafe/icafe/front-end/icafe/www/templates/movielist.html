@@ -1,0 +1,12 @@
+<ion-view view-title="Movies On Hot">
+  <ion-content>
+    <div class="list">
+	    <a class="item item-thumbnail-left" ng-click='go(movie)' ng-repeat="movie in movies.results">
+	      <img src="img/movie.png">
+	      <h2>{{movie.title}}</h2>
+	      <p>Released Date: {{movie.release_date}}</p>
+	      <p>Vote Average: {{movie.vote_average}} / 10</p>
+	    </a>
+		</div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-modal-view>
+	<label class="item item-input item-select" style="margin-top: 8%">
+	    <div class="input-label">
+	      Ranked All Shops By:
+	    </div>
+    <select ng-options="option.name for option in data.options track by option.id" ng-model="data.selectedOption">
+    </select>
+  </label>
+  <button class="button button-block button-calm" ng-click="change_ranking(data.selectedOption)">Submit</button>
+
+  <button class="button button-block button-royal" style="margin-top: 16%"
+    ng-click="scan()">
+  		Quick Scanner (Mobile Only)
+  </button>
+
+    
+</ion-modal-view>

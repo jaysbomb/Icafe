@@ -1,0 +1,21 @@
+<ion-view view-title="Shop Setting">
+    <ion-content>
+        <div class="list">
+            <form ng-submit="setting(shop)">
+                <label class="item item-input">
+                    <i class="icon ion-home"></i>
+                    <span class="input-label" style="margin-left:6px;">Website</span>
+                    <input type="text" ng-model="shop.website" required>
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-iphone"></i>
+                    <span class="input-label" style="margin-left:6px;">Tel</span>
+                    <input type="text" ng-model="shop.tel" required>
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Update</button>
+                </label>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

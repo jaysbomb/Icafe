@@ -1,0 +1,43 @@
+<ion-view view-title="Recommend">
+  <ion-content padding="true">
+  	<h3 style="text-align: center"></h3>
+		<div class="list card">
+			<div ng-repeat="dish in recommendlist" style="margin-top: 5%">
+			  
+			  <div class="item item-avatar">
+			    <img  src="img/gold-medal-blue.png">
+			    <h2>{{dish.name}}</h2>
+			    <p>HK$: {{dish.price}}</p>
+			    <p>
+			      {{dish.description}}
+			    </p>
+			  </div>
+
+			  <a class="item item-icon-left assertive" ng-click='addtocart(dish)'>
+    			<i class="icon ion-plus-circled"></i>
+    			Add To Cart
+  			  </a>
+
+  			  <div class="item item-divider">
+			   
+			  </div>
+			
+			</div>
+		  
+		</div>
+  </ion-content>
+  
+</ion-view>
+
+<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB1gosMET5STW4P_lywFvrMt9dCGifOwWg",
+    authDomain: "icafe-test.firebaseapp.com",
+    databaseURL: "https://icafe-test.firebaseio.com",
+    storageBucket: "icafe-test.appspot.com",
+    messagingSenderId: "610345461670"
+  };
+  firebase.initializeApp(config);
+</script>

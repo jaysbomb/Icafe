@@ -1,0 +1,21 @@
+  <ion-modal-view>
+    <h1 class="title" style="text-align: center">Update Your Dish</h1>
+    <div class="list list-inset">
+		  <label class="item item-input">
+    		<input ng-model="coffee_name" type="text" placeholder="{{current_coffee.name}}">
+  		</label>
+  		<label class="item item-input">
+   			<input ng-model="coffee_price" type="text" placeholder="€ {{current_coffee.price}}">
+  		</label>
+
+  		<ionic-ratings ratingsobj='ratingsObject'></ionic-ratings>
+
+  		<button class="button button-block button-energized" ng-click="updatecoffee(coffee_name,coffee_price)">
+  			Submit
+		  </button>
+
+      <button class="button button-block button-energized" style="margin-top: 30px"
+          ng-click="deletecoffee()">
+          Delete This Dish!
+      </button>
+</ion-modal-view>

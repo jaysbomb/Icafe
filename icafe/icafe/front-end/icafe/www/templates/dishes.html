@@ -1,0 +1,28 @@
+<ion-view view-title="Dishes">
+  <ion-content padding="true">
+    <button class="button button-block button-energized" ng-click="modalsettablenumber.show()">
+        Set Table Number
+    </button>
+    <button class="button button-block button-energized" ng-click="modalsetdish.show()">
+        Create A Set Meal
+    </button>
+  	<button class="button button-block button-energized" ng-click="modaladd.show()">
+        Click To Add a new Dish!
+    </button>
+	
+    <div class="list">
+      <a class="item item-thumbnail-left item-button-right" ng-repeat="dish in all_dishes" ng-model="dish_in_store">
+        <img src="img/bento.jpg">
+        <h2>{{dish.name}}</h2>
+        <p>HK$: {{dish.price}} </p>
+        <p>Description: {{dish.description}} </p>
+        <p>Category:  {{dish.category}} </p>
+        <button class="button button-assertive" style="margin-top: 30px"
+          ng-click="openEditModal(dish)">
+          Edit
+        </button>
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>

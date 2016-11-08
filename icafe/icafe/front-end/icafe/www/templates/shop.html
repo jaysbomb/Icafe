@@ -1,0 +1,36 @@
+<ion-view view-title="{{shop.name}}">
+  <ion-content>
+  	<div class="list card">
+
+  <div class="item item-body" style="margin: 0 auto;width: 300px;">
+    <p>Tel: {{shop.tel}}</p>
+    <p>Region: {{shop.region}}</p>
+ 		<p>Location: {{shop.address}}</p>
+    <p>Website: <a href="{{shop.website}}" target="_blank">{{shop.website}}</a></p>
+  </div>
+ <div id="shopmap" data-tap-disabled="true" style="height: 300px; width: 100%;"></div>
+  
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" ng-click="add_fav(shop)">
+      <i class="icon ion-heart"></i>
+      Like
+    </a>
+    <a class="tab-item" href="#" ng-click="modal.show()">
+      <i class="icon ion-chatbox"></i>
+      Comment
+    </a>
+  </div>
+  <div class="item item-divider">
+   
+  </div>
+	<div class="list">
+		 <a class="item item-avatar" ng-repeat="comment in comments | orderBy:'-timestamp'">
+      <img src="img/user.png">
+      <h2>Rating: {{comment.rating}}</h2>
+      <h2>{{comment.text}}</h2>
+      <p>Commented by {{comment.user}}</p>
+    </a>
+	</div>
+</div>
+  </ion-content>
+</ion-view>

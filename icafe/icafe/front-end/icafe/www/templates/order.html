@@ -1,0 +1,35 @@
+<ion-view view-title="My Order">
+  <ion-content padding="true">
+      <div class="list card">
+        <h4>Order being Processing</h4>
+      <div class="item item-avatar" ng-show="showorder">
+        <img src="img/order.png">
+        <h2>Order ID: {{orderid}}</h2>
+        <p>Table: {{ordertablenumber}}</p>
+        <p>Price: {{orderprice}}</p>
+        <p>Bank Card Number: {{orderbankcard}}</p>
+        <p>Name On Bank Card: {{ordername}}</p>
+        <p>Order Created On: {{ordercreatetime}}</p>
+        <div class="list">
+          <a class="item item-thumbnail-left" href="#" ng-repeat="dish in cartItems track by $index" ng-model="dish_in_cart">
+            <img src="img/bento.jpg">
+            <h2>{{dish.name}}</h2>
+            <p>HK$: {{dish.price}} </p>
+            <p>Category:  {{dish.category}} </p>
+            <p>Number: {{orderdishamount[$index]}} </p>
+          </a>
+        </div>
+      </div>
+
+      <div class="item item-body">
+        <p>
+          Order Status: {{orderstatus}}
+        </p>
+      </div>
+
+    </div>
+
+    <h4>Order History</h4>
+
+  </ion-content>
+</ion-view>

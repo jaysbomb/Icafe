@@ -1,0 +1,12 @@
+<ion-view view-title="Cinemas">
+  <ion-content>
+    <div class="list">
+	    <a class="item item-thumbnail-left" ng-click='go(cinema)' ng-repeat="cinema in cinemas.data">
+	      <img src="img/cinema.png">
+	      <h2>{{cinema.name}}</h2>
+	      <p>Tel: {{cinema.tel}}</p>
+	      <p ng-show="cinema.website">Website: {{cinema.website}}</p>
+	    </a>
+		</div>
+  </ion-content>
+</ion-view>

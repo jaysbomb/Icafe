@@ -1,0 +1,62 @@
+<ion-view view-title="Pay">
+  <ion-content padding="true">
+  <div class="card" >
+    <div class="item item-text-wrap">
+      Review your order here:
+    </div>
+    <div class="item item-text-wrap">
+     Name: {{username}}  
+    </div>
+    <div class="item item-text-wrap">
+     Email: {{useremail}}  
+    </div>
+    <div class="item item-text-wrap">
+     TableNumber: {{tablenumber}}  
+    </div>
+  </div>
+   
+  <div class="list">
+    <a class="item item-thumbnail-left" href="#" ng-repeat="dish in cartItems track by $index" ng-model="dish_in_cart">
+      <img src="img/bento.jpg">
+      <h2>{{dish.name}}</h2>
+      <p>HK$: {{dish.price}} </p>
+      <p>Category:  {{dish.category}} </p>
+      <p>Number: {{cartItemsAmount[$index]}} </p>
+    </a>
+  </div>
+
+  <div class="card" >
+    <div class="item item-text-wrap">
+      Total: {{totalPrice}}
+    </div>
+    <div class="item item-text-wrap">
+      Please enter your bank details here.
+    </div>
+  </div>
+
+  <div class="item item-input-inset" >
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="Card Number" ng-model="cardnumber">
+    </label>
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="Security Code" ng-model="cardsecuritycode">
+    </label>
+  </div>
+
+  <div class="item item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="Name on Card" ng-model="cardname">
+    </label>
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="Expiration Month" ng-model="cardmonth">
+    </label>
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="Expiration Year" ng-model="cardyear">
+    </label>
+  </div>
+
+  <button class="button button-block button-balanced" style="margin-top: 1%" ng-click="generateOrder(cardnumber,cardname)">
+    Pay
+  </button>
+  </ion-content>
+</ion-view>

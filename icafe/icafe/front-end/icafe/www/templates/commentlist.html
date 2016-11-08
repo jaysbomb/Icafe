@@ -1,0 +1,12 @@
+<ion-view view-title="Comments">
+  <ion-content>
+    <div class="list">
+	    <a class="item item-thumbnail-left" ng-repeat="comment in comments">
+	      <img src="img/womcomment.png">
+	      <h2>Comment: {{comment.text}}</h2>
+	      <h2>Rating: {{comment.rating}}</h2>
+	      <p>Posted At: {{comment.createdAt | date:"MM/dd/yyyy 'at' h:mma"}}</p>
+	    </a>
+		</div>
+  </ion-content>
+</ion-view>

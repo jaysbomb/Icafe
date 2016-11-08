@@ -1,0 +1,13 @@
+<ion-view view-title="Settings">
+	<ion-content>
+	<h3 style="text-align: center">Drag to adjust the distance radius.</h3>
+   		<div class="item range range-positive">
+    		<input ng-model="radius" type="range" name="volume" min="0" max="5000"  ng-change="change_radius(radius)">
+  		</div>
+  	<h3 style="text-align: center">{{value}}meters</h3>
+
+  	<button class="button button-full button-positive" ng-click="post_radius(radius)">
+  		Submit
+	</button>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,14 @@
+{
+  "name": "icafe",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.1",
+    "angular-local-storage": "latest"
+  },
+  "dependencies": {
+    "ion-autocomplete": "~0.3.1",
+    "ng-cordova-oauth": "~0.2.0",
+    "ngprogress-lite": "latest",
+    "ionic-ratings": "~0.2.0"
+  }
+}

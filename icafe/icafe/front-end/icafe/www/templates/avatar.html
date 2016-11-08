@@ -1,0 +1,9 @@
+<ion-modal-view>
+  <h3 style="text-align: center">Click to choose your avatar.</h3>
+  <div class="row" >
+    <div class="item item-avatar col-10" ng-repeat="avatar in avatars" ng-click="choose_avatar(avatar)">
+      <img src="img/avatar{{avatar.avatar_id}}.jpg" >
+    </div>
+  </div>
+  
+</ion-modal-view>

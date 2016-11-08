@@ -1,0 +1,32 @@
+<ion-view view-title="{{movie.name}}">
+  <ion-content>
+  	<div class="list card">
+
+  <div class="item item-image" style="width: 20%; margin: auto">
+    <img src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}">
+  </div>
+
+  <div class="item item-body" style="margin: 0 auto;width: 300px;">
+    <p>Title: {{movie.title}}</p>
+    <p>Release Date: {{movie.release_date}}</p>
+ 		<p>Overview: {{movie.overview}}</p>
+    <p>Vote Average": {{movie.vote_average}}</p>
+  </div>
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" href="#" ng-click="modal.show()">
+      <i class="icon ion-chatbox"></i>
+      Comment
+    </a>
+  </div>
+  <div class="item item-divider">
+  </div>
+	<div class="list">
+		 <a class="item item-avatar" ng-repeat="comment in comments | orderBy:'-timestamp'">
+      <img src="img/user.png">
+      <h2>Rating: {{comment.rating}}</h2>
+      <h2>{{comment.text}}</h2>
+    </a>
+	</div>
+</div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,48 @@
+  <ion-modal-view>
+  <ion-content padding="true">
+    <h1 class="title" style="text-align: center">Update Dish</h1>
+    <div class="list list-inset">
+		  <label class="item item-input">
+    		<input ng-model="dish_name" type="text" placeholder="{{current_dish.name}}">
+  		</label>
+  		<label class="item item-input">
+   			<input ng-model="dish_price" type="text" placeholder="€ {{current_dish.price}}">
+  		</label>
+
+      <label class="item item-input">
+        <input ng-model="dish_description" type="text" placeholder="Description:  {{current_dish.description}}">
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+            Dish Category
+        </div>
+      <select ng-model="dish_category" ng-options="category for category in categories">
+        <option value=""></option>
+      </select>
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+            Dish Serving Period
+        </div>
+      <select ng-model="dish_period" ng-options="period for period in periods">
+        <option value="">...Choose Time Period...</option>
+      </select>
+      </label>
+
+  		<button class="button button-block button-assertive" ng-click="updatedish(dish_name,dish_price,dish_description,dish_category,dish_period)">
+  			Submit
+		  </button>
+
+      <button class="button button-block button-energized" style="margin-top: 30px"
+          ng-click="deletedish()">
+          Delete This Dish!
+      </button>
+      
+      <button class="button button-block button-assertive" style="margin-top: 30px"
+          ng-click="addtorecommend()">
+          Add to Recommend List!
+      </button>
+</ion-content>
+</ion-modal-view>

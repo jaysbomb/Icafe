@@ -1,0 +1,17 @@
+<ion-view view-title="Users">
+  <ion-content padding="true">	
+    <div class="list">
+      <a class="item item-thumbnail-left item-button-right" ng-repeat="user in all_users" ng-model="user_in_db">
+        <img src="img/user-profile.png">
+        <h2>Name: {{user.name}}</h2>
+        <p>Email: {{user.email}} </p>
+        <p>Created Time: {{user.createdAt}} </p>
+        <button class="button button-assertive" style="margin-top: 30px"
+          ng-click="deleteuser(user)">
+          Delete 
+        </button>
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>

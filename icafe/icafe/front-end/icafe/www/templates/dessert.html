@@ -1,0 +1,16 @@
+<ion-view view-title="Dessert">
+  	<ion-content padding="true">
+		<div class="list">
+		    <a class="item item-thumbnail-left item-button-right" ng-repeat="dessert in dessertlist" style="click: false">
+		      <img src="img/bento.jpg">
+		      <h2>{{dessert.name}}</h2>
+		      <p>HK$: {{dessert.price}}</p>
+		      <p>Description: {{dessert.description}}</p>
+		      <button class="button  button-balanced button-clear   icon ion-android-cart" style="margin-top: 30px"
+	          ng-click="addToCart(dessert)">
+        	</button>
+		    </a>	    
+		</div>
+
+  </ion-content>
+</ion-view>

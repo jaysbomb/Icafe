@@ -1,0 +1,35 @@
+<ion-modal-view>
+    <h3 class="title" style="text-align: center">Add A New Dish</h3>
+    <div class="list list-inset">
+		<label class="item item-input">
+    		<input ng-model="dish_name" type="text" placeholder="Dish Name">
+  	</label>
+		<label class="item item-input">
+ 			<input ng-model="dish_price" type="text" placeholder="Dish Price">
+		</label>
+    <label class="item item-input">
+      <input ng-model="dish_description" type="text" placeholder="Dish Description">
+    </label>
+  		
+  		<label class="item item-input item-select">
+    		<div class="input-label">
+      			Dish Category
+    		</div>
+    	<select ng-model="dish_category" ng-options="category for category in categories">
+        <option value="">...Choose the Category...</option>
+    	</select>
+  		</label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+            Dish Serving Period
+        </div>
+      <select ng-model="dish_period" ng-options="period for period in periods">
+        <option value="">...Choose Time Period...</option>
+      </select>
+      </label>
+
+  		<button class="button button-block button-assertive" ng-click="adddish(dish_name,dish_price,dish_description,dish_category,dish_period)">
+  			Add
+		  </button>
+</ion-modal-view>

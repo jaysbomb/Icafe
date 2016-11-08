@@ -1,0 +1,19 @@
+<ion-view view-title="Search">
+    <ion-header-bar class="bar-subheader item-input-inset">
+  		<label class="item-input-wrapper">
+    		<i class="icon ion-search"></i>
+    		<input id="search_page" type="search" placeholder="Search" ng-change="search(data.search)" ng-model="data.search">
+  		</label>
+  		<button class="button button-clear" ng-click="clear()">
+    		Cancel
+  		</button>      
+    </ion-header-bar>
+    
+  <ion-content>
+   <div class="list">
+   <a class="item" ng-click='go(shop)' ng-repeat="shop in data.shops">
+    {{shop.name}}
+   </a>
+  </div>
+  </ion-content>
+</ion-view>

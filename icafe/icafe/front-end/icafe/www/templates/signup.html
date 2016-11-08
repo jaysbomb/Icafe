@@ -1,0 +1,37 @@
+<ion-header-bar>
+  <h1 class="title">Icafe-Signup</h1>
+</ion-header-bar>
+<ion-content>
+  <form ng-submit="doSignup(user)">
+    <div class="list">
+      <label class="item item-input">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-android-contact"></i>
+        <span class="input-label" style="margin-left:10px;">Name</span>
+        <input type="text" ng-model="user.name" required>
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-email"></i>
+        <span class="input-label" style="margin-left:10px;">Email</span>
+        <input type="email" ng-model="user.email" required>
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-locked"></i>
+        <span class="input-label" style="margin-left:10px;">Password</span>
+        <input type="password" ng-model="user.password" required>
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-locked"></i>
+        <span class="input-label" style="margin-left:10px;">Confirm Password</span>
+        <input type="password" ng-model="user.password_confirmation" required>
+      </label>
+      <label class="item">
+        <button class="button button-block button-assertive" type="submit">Sign up</button>
+      </label>
+    </div>
+  </form>
+  <label class="item">
+    <button class="button button-block button-energized" ui-sref="login">Login</button>
+  </label>  
+</ion-content>

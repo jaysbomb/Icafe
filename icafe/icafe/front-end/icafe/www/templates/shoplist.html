@@ -1,0 +1,13 @@
+<ion-view view-title="Shops">
+  
+  <ion-content>
+   <div class="list">
+	    <a class="item item-thumbnail-left" ng-click='go(shop)' ng-repeat="shop in shops">
+	      <img src="img/shops.png">
+	      <h2>{{shop.name}}</h2>
+	      <p>Tel: {{shop.tel}}</p>
+	      <p>Distance: {{shop.dist}} KM</p>
+	    </a>
+		</div>
+  </ion-content>
+</ion-view>

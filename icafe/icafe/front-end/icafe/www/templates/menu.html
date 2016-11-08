@@ -1,0 +1,118 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-assertive">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right" >
+                <h3 style="color: white">Table No. {{tableNumber}}</h3>
+                <button class="button button-icon ion-android-cart" ng-click='goToCart()'>
+                    {{cartNumber}}
+                </button>
+                <button class="button button-energized" ng-click='goToLogin()' ng-show="loginOrNot">
+                    Login
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+        <ion-header-bar class="bar-assertive">
+            <button
+            ng-show="submenu"
+            ng-click="backToMain()"
+            class="button button-clear icon ion-chevron-left"
+            >Back</button>
+        </ion-header-bar>
+        <ion-content>
+        <div
+            ng-switch on="selection"
+            class="slide-right-left"
+            ng-class="{reverse: submenu}"
+        >
+        <div class="item item-avatar">
+            <img src="img/defaultpro.png">
+            <h2 ng-show="loginOrNot">You are not logged in.</h2>
+            <h2>{{user.email}}</h2>
+            <p>{{user.name}}</p>
+        </div>
+            <div ng-switch-default>
+            <ion-list>
+                <ion-item ng-click="openSub('sub')" ng-show="showAdmin">
+                    Admin
+                    <span class="item-note">
+                        Go
+                    </span>
+                </ion-item>            
+                <ion-item ng-click="openSub2('sub2')">
+                    View Menu
+                    <span class="item-note">
+                        See Catagorise
+                    </span>
+                </ion-item>
+                <ion-item menu-close href="#/app/cart">
+                    Cart
+                </ion-item>
+                <ion-item menu-close href="#/app/order">
+                    My Order
+                </ion-item>
+                <ion-item menu-close ui-sref="logout">
+                    {{goLogin}}
+                </ion-item>         
+            </ion-list>
+            </div>
+
+            <div ng-switch-when="sub2">
+                <ion-list>
+                <div class="item item-divider">
+                    Catagorized By:
+                </div>
+                <ion-item menu-close href="#/app/recommend">
+                    Recommend
+                </ion-item>
+                <ion-item menu-close href="#/app/salad">
+                    Salad
+                </ion-item>
+                <ion-item menu-close href="#/app/staple">
+                    Staple
+                </ion-item>
+                <ion-item menu-close href="#/app/dessert">
+                    Dessert
+                </ion-item>
+                <ion-item menu-close href="#/app/drink">
+                    Drink
+                </ion-item>
+                <ion-item menu-close href="#/app/soup">
+                    Soup
+                </ion-item>
+                <ion-item menu-close href="#/app/snack">
+                    Snack
+                </ion-item>
+                <ion-item menu-close href="#/app/setmeal">
+                    Set Meal
+                </ion-item>
+                </ion-list>
+            </div>
+
+            <div ng-switch-when="sub">
+                <ion-list>
+                <div class="item item-divider">
+                    I want to:
+                </div>
+                <ion-item menu-close href="#/app/dishes">
+                    Manage Menu
+                </ion-item>
+                <ion-item menu-close href="#/app/users">
+                    Manage User
+                </ion-item>
+                </ion-list>
+            </div>
+            
+            </div>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

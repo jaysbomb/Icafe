@@ -1,0 +1,12 @@
+<ion-view view-title="Salad">
+  <ion-content padding="true">
+		<div class="list">
+		    <a class="item item-thumbnail-left" ng-repeat="salad in saladlist">
+		      <img src="img/bento.jpg">
+		      <h2>{{salad.name}}</h2>
+		      <p>HK$: {{salad.price}}</p>
+		      <p>Description: {{salad.description}}</p>
+		    </a>
+		</div>
+  </ion-content>
+</ion-view>

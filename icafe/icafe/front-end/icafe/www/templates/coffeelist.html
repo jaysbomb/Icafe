@@ -1,0 +1,31 @@
+<ion-view view-title="Coffees">
+  <ion-content>
+  <div class="item item-divider">
+    My Coffees:
+  </div>
+    <div class="list">
+      <a class="item item-thumbnail-left item-button-right" ng-repeat="coffee in user_coffees" ng-model="coffee_shop">
+        <img src="img/coffee.png">
+        <h2>{{coffee.name}}</h2>
+        <p>€ {{coffee.price}} </p>
+        <p>From: {{coffee.shopname}} </p>
+        <p>Rating:  {{coffee.rating}} 🌟</p>
+        <button class="button button-positive" style="margin-top: 30px"
+          ng-click="openEditModal(coffee)">
+          Edit
+        </button>
+      </a>
+    </div>
+
+    <button class="button button-block button-positive" ng-click="modaladd.show()">
+        Add a new Coffee!
+    </button>
+
+    <div class="item item-divider" style="margin-top: 20px">
+    Check where other people buy their coffee!!
+    </div>
+		<div id="coffeesmap" data-tap-disabled="true" style="height: 300px; width: 100%;"></div>
+    <div class="item item-divider" style="margin-top: 20px">
+    </div>    
+  </ion-content>
+</ion-view>

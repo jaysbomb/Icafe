@@ -1,0 +1,12 @@
+<ion-view view-title="WineBars">
+  <ion-content>
+    <div class="list">
+	    <a class="item item-thumbnail-left" ng-click='go(winebar)' ng-repeat="winebar in winebars.data">
+	      <img src="img/winebar.png">
+	      <h2>{{winebar.name}}</h2>
+	      <p>Tel: {{winebar.tel}}</p>
+	      <p ng-show="winebar.website">Website: {{winebar.website}}</p>
+	    </a>
+		</div>
+  </ion-content>
+</ion-view>

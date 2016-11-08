@@ -1,0 +1,12 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Leave Your Comments Here</h1>
+    </ion-header-bar>
+    <ion-content>
+        <ionic-ratings ratingsobj='ratingsObject'></ionic-ratings>
+        <textarea ng-model="comment" style="background-color:lightcyan; width: 100%; height: 120px"></textarea>
+        <label class="item">
+            <button class="button button-block button-positive" ng-click="post(comment)">post</button>
+        </label>
+    </ion-content>
+</ion-modal-view>

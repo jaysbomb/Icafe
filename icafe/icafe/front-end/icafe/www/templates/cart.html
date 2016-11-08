@@ -1,0 +1,33 @@
+<ion-view view-title="Cart">
+  <ion-content padding="true">
+  	<h3 style="text-align: center">Edit your cart here~</h3>
+	
+  	<div class="list" >
+      <a class="item item-thumbnail-left item-button-right" ng-repeat="dish in cartItems track by $index" ng-model="dish_in_cart" >
+        <img src="img/bento.jpg">
+        <h2>{{dish.name}}</h2>
+        <p>HK$: {{dish.price}} </p>
+        <p>Category:  {{dish.category}} </p>
+        <button style="margin-top: 5px" 
+        ng-click="addOne( {{cartItemsId[$index]}} )">+</button>
+        <p>Number: {{cartItemsAmount[$index]}} </p>
+        <button style="margin-top: 5px" 
+        ng-click="minusOne( {{cartItemsId[$index]}} )">-</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="item item-text-wrap">
+        Total: {{totalPrice}}
+      </div>
+    </div>
+
+    <button class="button button-block button-energized" ng-click="clearCart()">
+      Clear My Cart
+    </button>
+    <button class="button button-block button-energized" ng-click="goCheck()">
+      Go Check
+    </button>
+
+  </ion-content>
+</ion-view>
